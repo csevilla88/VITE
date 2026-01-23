@@ -40,3 +40,32 @@ document.body.append(button);
 document.body.append(Button("Este es un botón pequeño", "s"))
 document.body.append(Button("Este es un botón normal"))
 document.body.append(Button("Este es un botón grande", "l"))
+
+
+const Card = (text, src) => {
+  const card = document.createElement("div");
+  const p = document.createElement("p");
+  const img = document.createElement("img");
+
+  card.classList.add("card");
+  img.src = src;
+  p.textContent = text;
+
+  card.append(img, p, Button("Comprar"));
+  return card;
+};
+
+document.body.append(
+  Card(
+    "Texto de ejemplo",
+    "https://img.freepik.com/foto-gratis/retrato-abstracto-ojo-elegancia-mujeres-jovenes-generado-ai_188544-9712.jpg"
+  )
+);
+
+
+document.body.append(
+    Card(
+      "Otro texto!",
+      "https://www.aulacreactiva.com/wp-content/uploads/2021/06/tipos-de-formatos-para-diseno-grafico.jpg"
+    )
+  );
